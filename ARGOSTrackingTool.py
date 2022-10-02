@@ -16,16 +16,13 @@ file_name = 'data/raw/sara.txt'
 file_object = open(file_name,'r')
 
 #Read contents of file into a list
-line_list = file_object.readlines()
-
-#Close the file
-file_object.close()
+lineString = file_object.readline()
 
 #Extracting data line into variable
-for lineString in line_list:
+while lineString:
 
     #Check to see if the lineString is a data line
-    if not lineString[0] in ('#','u'):
+    if lineString[0] in ('#','u'):
         continue
     
     #Split lineString into a list of items
@@ -40,3 +37,9 @@ for lineString in line_list:
     
     #Print information to the user
     print(f'Record {record_id} indicates Sara was seet and {obs_lat}N, {obs_lon}W  on {obs_date}. ')
+    
+    # Move to the next line
+    lineString = file_object.readline()
+  
+# Close the file
+file_object.close()
