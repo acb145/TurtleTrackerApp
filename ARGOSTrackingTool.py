@@ -45,6 +45,8 @@ for lineString in line_list:
     #Print information to the user
     #print(f'Record {record_id} indicates Sara was seet and {obs_lat}N, {obs_lon}W  on {obs_date}. ')
     
-    #Populating date and location dictionaries
-    date_dict[record_id] = obs_date
-    location_dict[record_id] = (obs_lat, obs_lon) 
+    if obs_lc in ("1","2","3"):
+    
+        #Populating date and location dictionaries
+        date_dict[record_id] = obs_date
+        location_dict[record_id] = (obs_lat, obs_lon) 
