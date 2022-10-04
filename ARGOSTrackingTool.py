@@ -47,4 +47,4 @@ for lineString in line_list:
     
     #Populating date and location dictionaries
     date_dict[record_id] = obs_date
-    location_dict[record_id] = (obs_lat, obs_lon)
+    location_dict[record_id] = (obs_lat, obs_lon) 
